@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    /* Header */
+    --cor-PrimeiroESegundoNav: #747DFF59; /*opacidade = 35% */
+    --cor-NomeHeader: #FFFFFF;
+    --cor-NomeSegundoNav: #767F86;
+    --cor-BotaoSegundoNav: #FFAD32;
+    --cor-BordaSegundoNav: #F9F9F9;
+    --cor-InputSegundoNav: #B8C0C7;
+
+}
+
+
+header{
+    background-image: url(/Assets/banner-header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1920px;
+    height: 900px;
+    top: 88px;
+}
+
+header .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    border: 1px solid #FFFFFF;
+    height: 88px;
+    background-color: var(--cor-PrimeiroESegundoNav);
+    border: none;
+}
+
+header .logo{
+    height: 50px;
+    margin-left: 68px;
+
+    font-family: 'Lobster', sans-serif, serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 50px;
+    
+
+}
+
+header a{
+    text-decoration: none;
+    color: var(--cor-NomeHeader);
+    top: 26px;
+}
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 44px;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif, serif;
+    font-weight: 700;
+   
+}
+header .title{
+    display: block;
+}
+header .hero-nav{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+header .navSecundaria{
+    padding-top: 520px;
+}
