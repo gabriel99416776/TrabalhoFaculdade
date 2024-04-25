@@ -20,12 +20,37 @@
 
 
 header{
-    background-image: url(/Assets/banner-header.png);
+    background-image: url(/img/banner-header.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 1920px;
-    height: 900px;
-    top: 88px;
+    height: 100vh;   
+    border: 1px solid #FFAD32;
+}
+
+.logo a{
+    margin-left: 68px;
+    font-family: 'Lobster', sans-serif, serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+.title {
+    display: flex;
+}
+
+.mask {
+    background-color: #000000;
+    height: 75vh;
+    width: 100vh;
+    opacity: 0.25;
+    position: absolute;
+    border: 1px solid #000000;
+    z-index: 1;
+}
+
+.text {
+   z-index: 2;
+   color: #FFFFFF;
 }
 
 header .interface{
@@ -39,17 +64,7 @@ header .interface{
     border: none;
 }
 
-header .logo{
-    height: 50px;
-    margin-left: 68px;
 
-    font-family: 'Lobster', sans-serif, serif;
-    font-weight: 400;
-    font-size: 2.5rem;
-    line-height: 50px;
-    
-
-}
 
 header a{
     text-decoration: none;
@@ -68,20 +83,4 @@ header nav ul li{
     font-weight: 700;
    
 }
-header .title{
-    display: block;
-}
-header .hero-nav{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-header .navSecundaria{
-    padding-top: 520px;
-}
+  
