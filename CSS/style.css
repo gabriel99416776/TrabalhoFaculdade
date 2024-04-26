@@ -23,8 +23,18 @@ header{
     background-image: url(/img/banner-header.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;   
-   
+    height: 130vh;    
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-PrimeiroESegundoNav);
+}
+
+.logo {
+    width: 50%;
+    padding: 10px;
 }
 
 .logo a{
@@ -34,38 +44,46 @@ header{
     font-size: 2.5rem;
 }
 
-.title {
-    display: flex;
-    justify-content: center;
-    align-items: ;
+.navbar {
+    width: 60%;
+    padding: 10px;
 }
 
-.mask {
-    background-color: #000000;
-    height: 75vh;
-    width: 100%;
-    opacity: .25;
-    position: absolute;
-    border: 1px solid #000000;
-    z-index: 1;
+.navbar ul{
+    list-style-type: none;
+}
+
+.navbar ul li{
+    display: inline-block;
+    padding: 0 44px;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif, serif;
+    font-weight: 700;
+   
+}
+
+.navbar ul li a:hover {
+    color: var(--cor-BotaoSegundoNav);
+    transition: 500ms ease-in-out;
+}
+
+.navbar ul li a:not(:hover) {
+    transition: 500ms ease-in-out;
+}
+
+.title {
+    display: flex;
+    background-color: #0000004f;
 }
 
 .text {
-   z-index: 2;
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
    color: #FFFFFF;
+   height: 90vh;
 }
-
-header .interface{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    border: 1px solid #FFFFFF;
-    height: 88px;
-    background-color: var(--cor-PrimeiroESegundoNav);
-    border: none;
-}
-
 
 
 header a{
@@ -73,16 +91,17 @@ header a{
     color: var(--cor-NomeHeader);
     top: 26px;
 }
-header nav ul{
-    list-style-type: none;
-}
 
-header nav ul li{
-    display: inline-block;
-    padding: 0 44px;
-    font-size: 1.5rem;
-    font-family: 'Poppins', sans-serif, serif;
-    font-weight: 700;
-   
+.form {
+    display: flex;
+    width: 100%;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
 }
-  
+form {
+    background-color: var(--cor-BordaSegundoNav);
+    padding: 30px;
+    width: 90%;
+    border-radius: 8px;
+}
