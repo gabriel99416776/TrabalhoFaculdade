@@ -33,7 +33,9 @@ header{
     background-image: url(/img/banner-header.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 130vh;    
+    background-position: center; /* Ou qualquer outra posição que funcione melhor */
+    height: 130vh;
+    width: 100%;
 }
 
 .header {
@@ -53,7 +55,6 @@ header{
     font-weight: 400;
     font-size: 2.5rem;
 }
-
 .navbar {
     width: 60%;
     padding: 10px;
@@ -61,6 +62,7 @@ header{
 
 .navbar ul{
     list-style-type: none;
+    overflow: hidden;
 }
 
 .navbar ul li{
@@ -70,6 +72,7 @@ header{
     font-family: 'Poppins', sans-serif, serif;
     font-weight: 700;
    
+    
 }
 
 .navbar ul li a:hover {
@@ -238,6 +241,13 @@ section .apresentation a{
     justify-content: center;
     align-items: center;
 }
+section .apresentation a:hover{
+    background-color: var(--cor-titulo);
+    transition: .5s ease-in-out;
+}
+section .apresentation a:not(:hover){
+    transition: .5s;
+}
 section .apresentation{
     display: flex;
     flex-direction: column;
@@ -267,7 +277,7 @@ section .photos img{
     gap: 70px;
     justify-content: center;
    
-    
+    padding-bottom: 100px;
 }
 .section-secondary  h2{
     font-family: var(--fonte-titulos);
@@ -364,7 +374,13 @@ section .photos img{
 
     margin-left: 30px;
 }
-
+.section-secondary .card a:hover{
+    background-color: var(--cor-titulo);
+    transition: .5s ease-in-out;
+}
+.section-secondary .card a:not(:hover){
+    transition: 0.5s;
+}
 .section-secondary h3, p, span{
     align-self: flex-start;
 }
@@ -386,6 +402,8 @@ section .textos-section-three{
     
      width: 315px;
      height: 45px;
+
+     padding-bottom: 80px;
   
  
  
@@ -409,6 +427,8 @@ section .textos-section-three{
      justify-content: space-between;
      
      margin-top: 40px;
+
+     padding-bottom: 80px;
  }
  
  section .avaliacao-user img{
@@ -417,6 +437,7 @@ section .textos-section-three{
      height: 232px;
      border: 4px solid var(--cor-BotaoSegundoNav);
      border-radius: 50%;
+     
  }
  section .avaliacao-user p{
      text-align: center;
@@ -426,6 +447,7 @@ section .textos-section-three{
      font-weight: 700;
      line-height: 30px;
      color: var(--cor-NomeSegundoNav);
+     padding-top: 20px;
  
  }
  section .avaliacao-user span{
@@ -463,9 +485,16 @@ section .textos-section-three{
      height: 330px;
      
  
-     display: flex;
-     justify-content: space-between;
- 
+    
+    
+ }
+
+ footer .footer-completo{
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+
+   margin: 0px 5%;
  }
  .retangulo-footer{
  
@@ -475,12 +504,7 @@ section .textos-section-three{
      
  
  }
- footer img{
-     width: 35px;
-     height: 35px;
-    
- }
- 
+
  footer .primeira-informacao-footer h2{
      width: 233px;
      height: 45px;
@@ -539,7 +563,7 @@ section .textos-section-three{
      font-family: 'Poppins', sans-serif, serif;
      font-size: 14px;
      font-weight: 400;
-     line-height: 21px;
+     line-height: 23px;
      color: var(--cor-InputSegundoNav);
  
  }
@@ -559,6 +583,14 @@ section .textos-section-three{
      border: none;
      
  }
+ footer .input-footer{
+    display: flex;
+    gap: 10px;
+ }
+ footer  input[type="text"] {
+    padding: 10px; 
+    font-size: 18px;
+}
  footer .input-link-footer input:focus{
      box-shadow: 0 0 0 0;
      outline: 0;
@@ -572,6 +604,8 @@ section .textos-section-three{
      font-weight: 400;
      line-height: 21px;
      color: var(--cor-InputSegundoNav);
+
+    
  }
  
  footer .input-link-footer button{
@@ -587,5 +621,63 @@ section .textos-section-three{
      font-size: 16px;
      font-weight: 700;
      line-height: 24px;
+     cursor: pointer;
      
  }
+
+ footer .primeira-informacao-footer{
+    margin: 30px 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+ } 
+
+ footer .segunda-informacao-footer{
+    margin: 30px 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+ } 
+
+ footer .input-link-footer{
+    margin: 30px 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+ } 
+
+ footer .links-footer img{
+    border: 2px solid var(--cor-InputSegundoNav);
+    
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    width: 37px;
+    height: 37px;
+
+
+ }
+
+ footer .links-footer img:hover{
+    border-color: var(--cor-BotaoSegundoNav);
+    
+    
+    transition: .5s ease-in-out;
+ }
+
+ footer .links-footer img:not(:hover){
+    transition: 0.4s;
+ }
+
+ footer hr{
+    width: 398px;
+    height: 0px;
+    border: 1px solid #B8C0C7;
+ }
+
+ @media screen and (max-width: 768px) {
+    header {
+        height: 100vh; /* Reduz a altura para garantir que a imagem seja visível em telas menores */
+    }
+}
